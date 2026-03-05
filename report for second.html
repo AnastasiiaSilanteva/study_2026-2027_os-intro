@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>report for second.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="%D0%BB%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%B0%D1%8F-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0-%E2%84%962">Лабораторная работа №2</h1>
+<h2 id="%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0-%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%BE%D0%BB%D1%8F-%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D0%B9-git">Система контроля версий Git</h2>
+<p><strong>Выполнила:</strong> Силантьева А.З.<br>
+<strong>Группа:</strong> НКАбд-05-25<br>
+<strong>Дата:</strong> 02 марта 2026</p>
+<h2 id="%D0%B2%D0%B2%D0%B5%D0%B4%D0%B5%D0%BD%D0%B8%D0%B5">Введение</h2>
+<p><strong>Цель работы:</strong> Изучить идеологию и применение средств контроля версий, освоить базовые умения работы с Git.</p>
+<h2 id="%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D1%8F">Задания</h2>
+<ol>
+<li>Установим Git и настроим его.</li>
+<li>Создадим SSH-ключи для безопасного подключения к GitHub.</li>
+<li>Создадим PGP-ключ для подписи коммитов.</li>
+<li>Зарегистрируемся на GitHub добавим ключи в аккаунт.</li>
+<li>Настроим автоматическую подпись коммитов.</li>
+<li>Создадим локальный репозиторий по шаблону курса и отправим его на GitHub.</li>
+<li>Ответим на контрольные вопросы.</li>
+</ol>
+<h2 id="%D0%BF%D0%BE%D0%B4%D0%B3%D0%BE%D1%82%D0%BE%D0%B2%D0%BA%D0%B0-%D0%BA-%D0%B2%D1%8B%D0%BF%D0%BE%D0%BB%D0%BD%D0%B5%D0%BD%D0%B8%D1%8E-%D0%BB%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%BE%D0%B9-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B">Подготовка к выполнению лабораторной работы</h2>
+<h3 id="1-%D0%BF%D0%BE%D0%B4%D0%B3%D0%BE%D1%82%D0%BE%D0%B2%D0%BA%D0%B0-macos">1. Подготовка macOS</h3>
+<p>Все действия выполнялись в приложении Терминал (Terminal).</p>
+<h2 id="2-%D0%B2%D1%8B%D0%BF%D0%BE%D0%BB%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BB%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D0%BE%D0%B9-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%8B">2. Выполнение лабораторной работы</h2>
+<h3 id="21-%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-git-%D0%B8-github-cli-gh">2.1 Установка Git и GitHub CLI (gh)</h3>
+<p>brew install git(обновила до последней версии) и проверила.
+Утилита gh упрощает работу с GitHub из командной строки.
+<img src="../Desktop/лаба 2 работа с git/Снимок экрана 2026-03-05 в 01.16.51.png" alt="alt text"></p>
+<h3 id="23-%D1%83%D1%81%D1%82%D0%B0%D0%BD%D0%BE%D0%B2%D0%BA%D0%B0-gnupg-gpg">2.3 Установка GnuPG (gpg)</h3>
+<p>GPG нужен для создания PGP-ключей и подписи коммитов.</p>
+<p><img src="../Desktop/лаба 2 работа с git/Снимок экрана 2026-03-05 в 01.17.44.png" alt="alt text"></p>
+<h2 id="3-%D0%B1%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D1%8F-%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0-git">3. Базовая настройка Git</h2>
+<p>Задала имя и email, которые будут привязываться к моим коммитам.
+Задам имя начальной ветки(master). Настрою окончания строк и включу проверку необратимых преобразований.</p>
+<p><img src="../Desktop/лаба 2 работа с git/Снимок экрана 2026-03-05 в 01.20.08.png" alt="alt text"></p>
+<h2 id="4-%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-ssh-%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%B9">4. Создание SSH-ключей</h2>
+<p>SSH-ключи нужны для безопасного подключения к GitHub без ввода пароля каждый раз.</p>
+<h3 id="41-%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BA%D0%BB%D1%8E%D1%87%D0%B0-rsa-%D0%B4%D0%BB%D0%B8%D0%BD%D0%BE%D0%B9-4096-%D0%B1%D0%B8%D1%82-%D0%B8-ed25519">4.1 Создание ключа RSA длиной 4096 бит и ed25519</h3>
+<p><img src="../Desktop/лаба 2 работа с git/Снимок экрана 2026-03-05 в 01.22.21.png" alt="alt text"></p>
+<p>Теперь у нас есть два ключа: RSA и ed25519.</p>
+<h2 id="5-%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-pgp-%D0%BA%D0%BB%D1%8E%D1%87%D0%B0-gpg">5. Создание PGP-ключа (GPG)</h2>
+<p>PGP-ключ нужен для подписи коммитов, чтобы GitHub показывал их как &quot;Verified&quot;.</p>
+<h3 id="51-%D0%B3%D0%B5%D0%BD%D0%B5%D1%80%D0%B0%D1%86%D0%B8%D1%8F-%D0%BA%D0%BB%D1%8E%D1%87%D0%B0">5.1 Генерация ключа</h3>
+<p><img src="../Desktop/лаба 2 работа с git/Снимок экрана 2026-03-05 в 01.22.49.png" alt="alt text"></p>
+<h3 id="52-%D0%BF%D1%80%D0%BE%D1%81%D0%BC%D0%BE%D1%82%D1%80-%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85-%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%B9-%D0%B8-%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BE%D1%82%D0%BF%D0%B5%D1%87%D0%B0%D1%82%D0%BA%D0%B0-fingerprint">5.2 Просмотр созданных ключей и получение отпечатка (fingerprint)</h3>
+<p>Экспортирую открытый ключ в формате ASCII.</p>
+<h2 id="6-%D0%B4%D0%BE%D0%B1%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%B9">6. Добавление ключей</h2>
+<h3 id="61-%D0%B4%D0%BE%D0%B1%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-ssh-%D0%BA%D0%BB%D1%8E%D1%87%D0%B0-%D0%B2-%D0%B0%D0%BA%D0%BA%D0%B0%D1%83%D0%BD%D1%82">6.1 Добавление SSH-ключа в аккаунт</h3>
+<p>Я скопировала открытый SSH-ключ ed25519 в буфер и вставила в поле Key. Тоже самое повторяю для ключа RSA.</p>
+<p>На той же странице появляется отпечаток ключа. Настраиваем автоматическую подпись коммитов Git.</p>
+<h3 id="62-%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0-git-%D0%BD%D0%B0-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D1%8D%D1%82%D0%BE%D0%B3%D0%BE-%D0%BA%D0%BB%D1%8E%D1%87%D0%B0">6.2 Настройка Git на использование этого ключа</h3>
+<p><img src="../Desktop/лаба 2 работа с git/Снимок экрана 2026-03-05 в 01.25.10.png" alt=""></p>
+<h2 id="7-%D0%BD%D0%B0%D1%81%D1%82%D1%80%D0%BE%D0%B9%D0%BA%D0%B0-github-cli-gh">7. Настройка GitHub CLI (gh)</h2>
+<p>Утилита gh позволит создавать репозитории прямо из терминала.</p>
+<h3 id="71-%D0%B0%D0%B2%D1%82%D0%BE%D1%80%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F">7.1 Авторизация</h3>
+<p><img src="../Desktop/лаба 2 работа с git/Снимок экрана 2026-03-05 в 01.25.36.png" alt=""></p>
+<h2 id="8-%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-%D1%80%D0%B0%D0%B1%D0%BE%D1%87%D0%B5%D0%B3%D0%BE-%D0%BF%D1%80%D0%BE%D1%81%D1%82%D1%80%D0%B0%D0%BD%D1%81%D1%82%D0%B2%D0%B0-%D0%BF%D0%BE-%D1%88%D0%B0%D0%B1%D0%BB%D0%BE%D0%BD%D1%83-%D0%BA%D1%83%D1%80%D1%81%D0%B0">8. Создание рабочего пространства по шаблону курса</h2>
+<p>В лабораторной предлагается использовать шаблон: https://github.com/yamadharma/course-directory-student-template</p>
+<p>Я создала свой репозиторий на основе этого шаблона и клонировала его локально.</p>
+<h3 id="81-%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5-%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D1%8B-%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%D0%BE%D0%B2">8.1 Создание структуры каталогов</h3>
+<p>Создадаю папку для курса и репозиторий на GitHub через gh.</p>
+<p><img src="../Desktop/лаба 2 работа с git/Снимок экрана 2026-03-05 в 01.26.10.png" alt="alt text"></p>
+<h3 id="82-%D0%BA%D0%BB%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D1%80%D0%B5%D0%BF%D0%BE%D0%B7%D0%B8%D1%82%D0%BE%D1%80%D0%B8%D1%8F-%D1%81-%D0%BF%D0%BE%D0%B4%D0%BC%D0%BE%D0%B4%D1%83%D0%BB%D1%8F%D0%BC%D0%B8">8.2 Клонирование репозитория с подмодулями</h3>
+<p><img src="../Desktop/лаба 2 работа с git/Снимок экрана 2026-03-05 в 01.27.25.png" alt="alt text"></p>
+<p>Далее я перехожу в каталог курса и настраиваю. Удаляю лишний файл и создаю необходимые каталоги.</p>
+<p><img src="../Desktop/лаба 2 работа с git/Снимок экрана 2026-03-05 в 01.28.02.png" alt="alt text"></p>
+<h3 id="83-%D0%BF%D0%B5%D1%80%D0%B2%D1%8B%D0%B9-%D0%BA%D0%BE%D0%BC%D0%BC%D0%B8%D1%82-%D0%B8-%D0%BE%D1%82%D0%BF%D1%80%D0%B0%D0%B2%D0%BA%D0%B0-%D0%BD%D0%B0-github">8.3 Первый коммит и отправка на GitHub</h3>
+<p><img src="../Desktop/лаба 2 работа с git/Снимок экрана 2026-03-05 в 01.28.02.png" alt="alt text"></p>
+<h2 id="%D0%BA%D0%BE%D0%BD%D1%82%D1%80%D0%BE%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5-%D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%81%D1%8B">Контрольные вопросы</h2>
+<p><em>Что такое системы контроля версий (VCS) и для решения каких задач они предназначаются?</em></p>
+<p>VCS — программные средства для учёта изменений файлов, совместной работы над проектами, хранения истории версий, возможности отката к предыдущим состояниям, разрешения конфликтов при одновременном редактировании.
+Объясните понятия VCS: хранилище, commit, история, рабочая копия.</p>
+<p>Хранилище (repository) — место хранения всех версий файлов и служебной информации.
+Commit (фиксация) — сохранение набора изменений в репозиторий с комментарием.
+История (history) — последовательность коммитов, позволяющая проследить эволюцию проекта.
+Рабочая копия (working copy) — локальная версия файлов проекта, с которой непосредственно работает пользователь.
+Централизованные и децентрализованные VCS: различия и примеры.</p>
+<p>Централизованные (CVS, Subversion): единый сервер с репозиторием, клиенты получают рабочие копии. Необходимо подключение к серверу для большинства операций.
+Децентрализованные (Git, Mercurial): каждый клиент имеет полную копию репозитория (включая историю), можно работать локально, синхронизация с другими репозиториями по необходимости.
+Действия с VCS при единоличной работе с хранилищем.</p>
+<p>Инициализация репозитория (git init).
+Добавление файлов под версионный контроль (git add).
+Фиксация изменений (git commit).
+Просмотр истории (git log), сравнение версий (git diff).
+Создание веток (git branch), слияние (git merge).
+Порядок работы с общим хранилищем VCS.</p>
+<p>Клонирование удалённого репозитория (git clone).
+Получение актуальных изменений (git pull).
+Внесение изменений в локальной ветке.
+Фиксация изменений (git commit).
+Отправка изменений в удалённый репозиторий (git push).
+При необходимости разрешение конфликтов.</p>
+<p><em>Основные задачи, решаемые git.</em></p>
+<p>Управление версиями файлов.
+Поддержка ветвления и слияния.
+Распределённая работа без постоянного подключения к серверу.
+Обеспечение целостности данных (через хеширование).
+Возможность подписи коммитов для подтверждения авторства.</p>
+<p><em>Назовите и кратко охарактеризуйте основные команды git.</em></p>
+<p>git init — создание репозитория.
+git clone — копирование удалённого репозитория.
+git add — добавление изменений в индекс.
+git commit — фиксация индекса с комментарием.
+git status — состояние рабочей копии.
+git log — история коммитов.
+git diff — различия между версиями.
+git branch — управление ветками.
+git checkout — переключение между ветками/коммитами.
+git merge — слияние веток.
+git pull — получение изменений из удалённого репозитория.
+git push — отправка изменений в удалённый репозиторий.
+git remote — управление удалёнными репозиториями.</p>
+<p><em>Приведите примеры использования при работе с локальным и удалённым репозиториями.</em></p>
+<p>Локальный: git init, git add file.txt, git commit -m &quot;Add file&quot;, git log.
+Удалённый: git clone ..., git pull, git push, git remote -v.</p>
+<p><em>Что такое ветви (branches) и зачем они нужны?</em></p>
+<p>Ветви позволяют разрабатывать новые функции или исправления изолированно от основной линии разработки. После завершения работы ветку можно слить с основной. Это упрощает параллельную работу нескольких разработчиков и эксперименты.</p>
+<p><em>Как и зачем можно игнорировать некоторые файлы при commit?</em></p>
+<p>Через файл .gitignore перечисляются шаблоны имён файлов/каталогов, которые Git не должен добавлять в репозиторий. Это нужно для исключения временных файлов, результатов сборки, конфиденциальных данных, чтобы они не загромождали репозиторий и не попадали в общий доступ.</p>
+<h2 id="%D0%B7%D0%B0%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%B8%D0%B5">Заключение</h2>
+<p>Я выполнила все шаги лабораторной работы №2:</p>
+<ol>
+<li>Настроила Git;</li>
+<li>Создала SSH и GPG ключи;</li>
+<li>Настроила подпись коммитов;</li>
+<li>Создала репозиторий на GitHub по шаблону;</li>
+<li>Отправила изменения.</li>
+</ol>
+
+</body>
+</html>
