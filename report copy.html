@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+        <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>&Lcy;&acy;&bcy;&ocy;&rcy;&acy;&tcy;&ocy;&rcy;&ncy;&acy;&yacy; &rcy;&acy;&bcy;&ocy;&tcy;&acy; &numero;1</title>
+            <style>
+/* From extension vscode.github */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+.vscode-dark img[src$=\#gh-light-mode-only],
+.vscode-light img[src$=\#gh-dark-mode-only],
+.vscode-high-contrast:not(.vscode-high-contrast-light) img[src$=\#gh-light-mode-only],
+.vscode-high-contrast-light img[src$=\#gh-dark-mode-only] {
+	display: none;
+}
+
+</style>
+            
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item {
+    list-style-type: none;
+}
+
+.task-list-item-checkbox {
+    margin-left: -20px;
+    vertical-align: middle;
+    pointer-events: none;
+}
+</style>
+<style>
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
+
+</style>
+<style>
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-note: #2f81f7;
+    --color-tip: #3fb950;
+    --color-warning: #d29922;
+    --color-severe: #db6d28;
+    --color-caution: #f85149;
+    --color-important: #a371f7;
+  }
+}
+
+</style>
+<style>
+.markdown-alert {
+  padding: 0.5rem 1rem;
+  margin-bottom: 16px;
+  color: inherit;
+  border-left: .25em solid #888;
+}
+
+.markdown-alert>:first-child {
+  margin-top: 0
+}
+
+.markdown-alert>:last-child {
+  margin-bottom: 0
+}
+
+.markdown-alert .markdown-alert-title {
+  display: flex;
+  font-weight: 500;
+  align-items: center;
+  line-height: 1
+}
+
+.markdown-alert .markdown-alert-title .octicon {
+  margin-right: 0.5rem;
+  display: inline-block;
+  overflow: visible !important;
+  vertical-align: text-bottom;
+  fill: currentColor;
+}
+
+.markdown-alert.markdown-alert-note {
+  border-left-color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-note .markdown-alert-title {
+  color: var(--color-note);
+}
+
+.markdown-alert.markdown-alert-important {
+  border-left-color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-important .markdown-alert-title {
+  color: var(--color-important);
+}
+
+.markdown-alert.markdown-alert-warning {
+  border-left-color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-warning .markdown-alert-title {
+  color: var(--color-warning);
+}
+
+.markdown-alert.markdown-alert-tip {
+  border-left-color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-tip .markdown-alert-title {
+  color: var(--color-tip);
+}
+
+.markdown-alert.markdown-alert-caution {
+  border-left-color: var(--color-caution);
+}
+
+.markdown-alert.markdown-alert-caution .markdown-alert-title {
+  color: var(--color-caution);
+}
+
+</style>
+        
+        </head>
+        <body class="vscode-body vscode-light">
+            <h1 id="лабораторная-работа-1">Лабораторная работа №1</h1>
+<h2 id="установка-ос-linux-fedora-sway">Установка ОС Linux (Fedora Sway)</h2>
+<p><strong>Выполнила:</strong> Силантьева А.З.<br>
+<strong>Группа:</strong> НКАбд-05-25<br>
+<strong>Дата:</strong> 01 марта 2026</p>
+<h2 id="введение">Введение</h2>
+<p><strong>Цель работы:</strong> Получить практические навыки установки Linux на виртуальную машину и начальной настройки системы.</p>
+<h2 id="подготовка-к-выполнению-лабораторной-работы">Подготовка к выполнению лабораторной работы</h2>
+<h3 id="1-подготовка-macos">1. Подготовка macOS</h3>
+<p>Все действия выполнялись в приложении Терминал (Terminal).</p>
+<h3 id="11-установка-fedora">1.1 Установка Fedora</h3>
+<p>Я заранее установила Fedora-Sway-Live-x86_64-43-1.6.iso</p>
+<h2 id="2-выполнение-лабораторной-работы">2. Выполнение лабораторной работы</h2>
+<h3 id="21-установка-homebrew">2.1 Установка Homebrew</h3>
+<p>Я установила homebrew — это менеджер пакетов для macOS, через который мы установим QEMU.</p>
+<p><img src="https://file%2B.vscode-resource.vscode-cdn.net/Users/anastasiasilanteva/Desktop/pictures/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-03-04%20%D0%B2%2001.54.48.png?version%3D1772578633527" alt="alt text"></p>
+<p>После завершения Homebrew выводит сообщение ==&gt; Next steps:. В нём есть две команды, которые нужно скопировать и выполнить. Обязательно выполняем их и проверяем установку.</p>
+<p><img src="file:////Users/anastasiasilanteva/Desktop/pictures/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-03-04%20%D0%B2%2002.01.53.png" alt="alt text"></p>
+<p>Далее я устанавливаю qemu.
+<img src="file:////Users/anastasiasilanteva/Desktop/pictures/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-03-04%20%D0%B2%2002.04.34.png" alt="alt text"></p>
+<p>Создаю папку virtlab в вашей домашней папке, чтобы хранить всё: образ диска, ISO-файл, скрипты запуска. Я также перемещаю скачанный ISO-образ Fedora в эту папку.</p>
+<p><img src="file:////Users/anastasiasilanteva/Desktop/pictures/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-03-04%20%D0%B2%2002.06.44.png" alt="alt text"></p>
+<p>Далее я создаю образ виртуального диска.
+<img src="file:////Users/anastasiasilanteva/Desktop/pictures/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-03-04%20%D0%B2%2002.08.12.png" alt="alt text"></p>
+<p>И наконец, запускаем QEMU в режиме полной эмуляции системы для архитектуры x86_64.
+<img src="file:////Users/anastasiasilanteva/Desktop/pictures/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-03-04%20%D0%B2%2002.09.38.png" alt="alt text"></p>
+<p><em>qemu-system-x86_64</em> — запускаем эмулятор для 64-битной x86 системы.</p>
+<p><em>machine type=q35,accel=tcg</em> — используем современный чипсет Q35 и программную эмуляцию (tcg), так как KVM на Mac недоступен.</p>
+<p><em>cpu max</em> - эмулируем максимально возможный процессор.</p>
+<p><em>smp 4</em> — выделяем 4 виртуальных ядра.</p>
+<p><em>m 2048</em> — 2 ГБ оперативной памяти.</p>
+<p><em>drive file=...</em> — подключаем наш виртуальный жёсткий диск.</p>
+<p><em>cdrom ...</em> — подключаем ISO-образ Fedora как CD-ROM.</p>
+<p><em>boot menu=on</em> — при старте показывать меню выбора загрузочного устройства (чтобы можно было выбрать CD).</p>
+<p><em>vga virtio</em> — тип видеокарты.</p>
+<p><em>display default,show-cursor=on</em> — стандартное отображение окна, показывать курсор.</p>
+<p><em>device virtio-balloon</em> — драйвер для управления памятью (гость может отдавать память хосту).</p>
+<p><em>chardev ... -device ...</em> — параметры для буфера обмена (чтобы работало копирование текста между хостом и гостем).</p>
+<h2 id="22-установка-fedora-на-диск">2.2 Установка Fedora на диск</h2>
+<p>Когда у меня загрузился графический интерфейс Fedora (Sway), я увидила приглашение и открыла терминал(ввела комаду liveinst).
+<img src="file:////Users/anastasiasilanteva/Desktop/pictures/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-03-04%20%D0%B2%2002.11.00.png" alt="alt text"></p>
+<p><img src="file:////Users/anastasiasilanteva/Desktop/pictures/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-03-04%20%D0%B2%2002.11.55.png" alt="alt text"></p>
+<p>Запустился графический установщик Anaconda и я завершила настройки.
+<img src="file:////Users/anastasiasilanteva/Desktop/pictures/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-03-04%20%D0%B2%2002.13.14.png" alt="alt text"></p>
+<h2 id="3-настройка-гостевой-системы-внутри-виртуалки">3. Настройка гостевой системы (внутри виртуалки)</h2>
+<h3 id="31-установка-драйверов-для-qemu">3.1 Установка драйверов для QEMU</h3>
+<p>Запускаем tmux (терминальный мультиплексор, чтобы не потерять сессию, если что). И установливает небходимые пакеты.</p>
+<p><img src="file:////Users/anastasiasilanteva/Desktop/pictures/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-03-04%20%D0%B2%2010.26.02.png" alt="
+">
+<img src="file:////Users/anastasiasilanteva/Desktop/pictures/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-03-04%20%D0%B2%2002.14.22.png" alt="alt text"></p>
+<p>И перезагружаем виртуальную машину с помощью reboot.</p>
+<h3 id="32-обновление-системы-и-установка-дополнительного-по">3.2 Обновление системы и установка дополнительного ПО</h3>
+<p><img src="file:////Users/anastasiasilanteva/Desktop/pictures/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-03-04%20%D0%B2%2010.28.46.png" alt="alt text"></p>
+<p>Далее я отключаю SELinux и настраиваем переключение клавиатуры(с помощью caps lock)</p>
+<p><img src="file:////Users/anastasiasilanteva/Desktop/pictures/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-03-04%20%D0%B2%2010.29.37.png" alt="alt text"></p>
+<p>Докачиваем ПО для создания отчета(pandoc).</p>
+<h2 id="4-выполнение-домашнего-задания">4. Выполнение домашнего задания</h2>
+<p>После установки и настройки системы выполнила команду dmesg для анализа загрузки:</p>
+<p><img src="file:////Users/anastasiasilanteva/Desktop/pictures/%D0%A1%D0%BD%D0%B8%D0%BC%D0%BE%D0%BA%20%D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%B0%202026-03-04%20%D0%B2%2010.30.45.png" alt="alt text"></p>
+<p>И тем самым находи всю необходимую информацию.</p>
+<p><em>Версия ядра:</em> dmesg | grep &quot;Linux version&quot;</p>
+<p><em>Частота процессора:</em> dmesg | grep -i &quot;detected.*MHz&quot;</p>
+<p><em>Модель процессора:</em> dmesg | grep &quot;CPU0&quot;</p>
+<p><em>Объём доступной памяти:</em> dmesg | grep -i &quot;Memory.*available&quot;</p>
+<p><em>Тип гипервизора:</em> dmesg | grep -i &quot;Hypervisor detected&quot;</p>
+<p><em>Тип ФС корневого раздела:</em> dmesg | grep &quot;rootfs&quot; или посмотрите mount | grep &quot; / &quot;.</p>
+<p><em>Последовательность монтирования:</em> dmesg | grep -i &quot;mount&quot; или journalctl -b | grep -i &quot;mount&quot;.</p>
+<h2 id="5-ответы-на-контрольные-вопросы">5. Ответы на контрольные вопросы</h2>
+<p>Учётная запись пользователя содержит: имя пользователя (login), UID (идентификатор пользователя), GID (основной группы), домашний каталог, командную оболочку (shell), пароль (обычно в зашифрованном виде в /etc/shadow), комментарий (полное имя и т.д.).
+Команды:</p>
+<p>Справка: man &lt;команда&gt; или &lt;команда&gt; --help.
+Перемещение: cd &lt;путь&gt;.
+Просмотр содержимого каталога: ls [опции] &lt;путь&gt;.
+Определение объёма каталога: du -sh &lt;каталог&gt;.
+Создание каталога: mkdir &lt;имя&gt;.
+Удаление каталога: rmdir &lt;пустой_каталог&gt; или rm -rf &lt;каталог&gt;.
+Создание файла: touch &lt;имя&gt; или &gt; &lt;имя&gt;.
+Удаление файла: rm &lt;файл&gt;.
+Задание прав: chmod &lt;режим&gt; &lt;файл&gt;.
+Просмотр истории команд: history.
+Файловая система — способ организации и хранения данных на носителе. Примеры: ext4 (типовая для Linux), XFS (высокопроизводительная), Btrfs (с поддержкой снапшотов), FAT32 (совместимая с Windows), NTFS (Windows).
+Посмотреть примонтированные ФС: mount или findmnt, или df -hT.
+Удалить зависший процесс: найти его PID через ps aux | grep &lt;имя_процесса&gt; или top, затем kill -9 <PID>.</p>
+<h1 id="заключение">Заключение</h1>
+<p>В результате лабораторной работы я успешно установила и настроила виртуальную машину с Fedora Sway на Mac M4 с помощью QEMU. Основная сложность была в эмуляции x86_64 на ARM. Все дальнейшие шаги внутри гостевой системы полностью соответствуют заданиям из лабораторной работы. Я получила практические навыки установки Linux на виртуальную машину и начальной настройки системы.</p>
+<h1 id="список-литературы">Список литературы</h1>
+<p>Лабораторная работа №1 (Архитектура ОС)</p>
+
+            
+            
+        </body>
+        </html>
